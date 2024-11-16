@@ -1,0 +1,128 @@
+<footer class="footer">
+  <div class="subscribe-area">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-md-6">
+          <div class="subscribe-content">
+            <h2>Inscrivez-vous à notre Newsletter</h2>
+            <p>Chaque mois, BHInternet vous propose une newsletter riche en informations pour rester à la pointe des
+              innovations technologiques. Profitez de conseils d'experts, de tendances du secteur et d'astuces pratiques
+              pour optimiser la transformation digitale de votre entreprise. Ne manquez pas cette ressource précieuse !
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <form class="newsletter-form">
+            <input type="email" class="input-newsletter" name="email" placeholder="Renseignez votre adresse email"
+              required="" autocomplete="off">
+            <button type="submit">Je m’inscris</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Subscribe Section -->
+  <!-- Start Footer Section -->
+  <div class="footer-area ptb-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <a class="footer-logo" href="#">
+              <img src="./assets/img/bhinternet-logo.png" class="white-logo" alt="logo">
+            </a>
+            <p>Nous accompagnons nos clients dans leur transformation numérique en
+              développant des logiciels personnalisés, des applications mobiles intuitives, et des
+              sites web adaptés à leurs besoins spécifiques.</p>
+            <!-- <ul class="footer-social">
+								<li>
+									<a href="#"> <i class="fab fa-facebook-f"></i></a>
+								</li>
+								<li>
+									<a href="#"> <i class="fa-brands fa-x-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"> <i class="fab fa-youtube"></i></a>
+								</li>
+								<li>
+									<a href="#"> <i class="fab fa-linkedin"></i></a>
+								</li>
+							</ul> -->
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <div class="footer-heading">
+              <h3>Nos services</h3>
+            </div>
+            <ul class="footer-quick-links">
+              <li><a href="#">Solutions pour les entreprises</a></li>
+              <li><a href="#">Développement web</a></li>
+              <li><a href="#">Intégration de l’IA</a></li>
+              <li><a href="#">Développement d’applications</a></li>
+              <li><a href="#">Optimisation SEO</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <div class="footer-heading">
+              <h3>Liens utiles</h3>
+            </div>
+            <ul class="footer-quick-links">
+              <li><a href="">À propos de nous</a></li>
+              <li><a href="">Nos services</a></li>
+              <li><a href="{% link contact.html %}">Contactez-nous</a></li>
+              <li><a href="{% link devis.html %}">Devis en ligne</a></li>
+              <li><a href="">Mentions légales</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <div class="footer-heading">
+              <h3>Nos coordonnées</h3>
+            </div>
+            <div class="footer-info-contact">
+              <i class="fas fa-phone-alt"></i>
+              <h3>Phone</h3>
+              <span><a href="tel:{{site.data.company.phone}}">{{site.data.company.phone}}</a></span>
+            </div>
+            <div class="footer-info-contact">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <span><a href="mailto:{{site.data.company.email}}">{{site.data.company.email}}</a></span>
+            </div>
+            <div class="footer-info-contact">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Address</h3>
+              <span>{{site.data.company.address}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer Section -->
+</footer>
+
+<div class="copyright-area">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-6">
+        <p><i class="fas fa-copyright"></i> 2024 BHinternet - All Rights Reserved.</p>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <ul>
+          <li><a href="">Terms &amp; Conditions</a></li>
+          <li><a href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="./assets/js/index.js"></script>
+<script src="./assets/js/formSubmit.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
