@@ -65,6 +65,8 @@ $(document).ready(function() {
 
 
 
+
+
 const nav = document.querySelector(".fixedNav");
 window.addEventListener("scroll", fixNav);
 
@@ -87,28 +89,81 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//Creates an event that fires every time the mouse moves over any div with the class of "img".
-// $(".slider_image").mousemove(function(event){
-  
-//   //Both the x and y value are calculated by taking the mouse x,y position on the page and subtracting it from the x,y position of the image on the page. "this" is the hovered element with the class of "img"
-//   var mousex = event.pageX - $(this).offset().left;
-//   var mousey = event.pageY - $(this).offset().top;
-  
-  
-//   //If you just used the mouse position values the translation effect will only go up and to the right, by subtracting half of the length / width of the imagevfrom the values  we get either a positive or negitive number so that the image will move in any direction.
-  
-//   //The 40 controls the amount of "movement" that will happen by giving us a smaller number, feel free to change it to get the effect that you want.
-//   var imgx = (mousex - 300) / 40;
-//   var imgy = (mousey - 200) / 40;
-  
-//   //Adds a translation css styles to the image element
-//   $(this).css("transform", "translate(" + imgx + "px," + imgy + "px)");
-// });
 
-// //This function will fire every time the user mouses off of the image. It resets the translation back to 0.
-// $(".img").mouseout(function(){
-//   $(this).css("transform", "translate(0px,0px)");
-// });
+
+$(document).ready(function () {
+  var owl = $(".owl2");
+  owl.owlCarousel({
+    items: 3,
+    nav: true,
+    loop: true, // Set to true for seamless looping
+    autoplay: false,
+    margin: 20, // Space between items
+    autoplayTimeout: 5000,
+    autoplayHoverPause: false,
+    dots: true,
+    dotsEach: true,
+    arrow: false,
+    animateIn: "fadeIn",
+    animateOut: "fadeOut",
+    stagePadding: 100, // Default padding to show part of prev/next items
+    center: true, // Center the active item
+    responsiveClass: true,
+    responsive: {
+      100: {
+        items: 1,
+        nav: true,
+        stagePadding: 50, // Smaller padding for mobile
+      },
+      400: {
+        items: 1,
+        
+        nav: false,
+        stagePadding: 60,
+      },
+      768: {
+        items: 1,
+       
+        nav: false,
+        stagePadding: 80,
+      },
+      1200: {
+        items: 1,
+        nav: false,
+        stagePadding: 100,
+      },
+      1600: {
+        items: 1,
+        nav: false,
+        stagePadding: 120,
+      },
+    },
+  });
+
+  // Optional: Limit visible dots
+  function limitDots() {
+    var dots = $(".owl-dot");
+    if (dots.length > 3) {
+      dots.slice(3).hide(); // Hide all dots after the third one
+    }
+  }
+
+  // Call the function to limit dots
+  limitDots();
+
+  // Reapply the limitDots function after each change (like when navigating)
+  owl.on("changed.owl.carousel", function (event) {
+    limitDots();
+  });
+
+  // Play and stop buttons
+  $(".play").on("click", function () {
+    owl.trigger("play.owl.autoplay", [5000]);
+  });
+  $(".stop").on("click", function () {
+    owl.trigger("stop.owl.autoplay");
+  });
+});
 
 
 

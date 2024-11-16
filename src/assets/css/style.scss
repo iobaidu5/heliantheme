@@ -634,6 +634,62 @@ body {
 .menu{
   position: relative;
 
+  &_card3{
+    width: 100%;
+    height: 55.0rem;
+    padding: 2.8rem;
+    border-radius: 3rem;
+    background-color: var(--color-primary);
+  }
+
+  &_card2{
+    width: 100%;
+    height: 41.6rem;
+    padding: 2.8rem;
+    border-radius: 3rem;
+    background-color: var(--color-primary);
+  }
+
+  &_card{
+    width: 100%;
+      padding: 2.8rem;
+      border-radius: 4rem;
+      background-color: var(--color-primary);
+      height: 100% !important;
+
+    &-content{
+
+      &--title{
+        font-family: "Libre Baskerville", sans-serif;
+        font-size: 2.1rem;
+        font-weight: 700;
+        line-height: 25.2px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;  
+        color: #fff; 
+        margin-bottom: 2rem;     
+      }
+
+      &--ul{
+        margin-left: 5rem;
+        margin-top: 3rem;
+      }
+
+      &--li{
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 1.5;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;   
+        color: #fff;     
+      }
+
+    }
+  }
+
   &_header{
     padding: 7rem 0;
     padding-bottom: 9rem;
@@ -706,7 +762,7 @@ body {
       }
 
       &:hover {
-        background-color: #E4E4E4CC;
+        background-color: transparent;
         border: .1rem solid var(--color-primary);
         color: var(--color-primary);
         text-decoration: none;
@@ -740,10 +796,10 @@ body {
 
     &-primbg2{
       position: absolute;
-      top: -3rem;
-      right: -1.5rem;
+      top: 23rem;
+      right: -19rem;
       width: 22.1rem;
-      height: 35.7rem;
+      height: 37.0rem;
       background-color: var(--color-primary);
       z-index: -1 !important;
     }
@@ -751,11 +807,26 @@ body {
     &-primbg3{
       position: absolute;
       bottom: -10rem;
-      right: -1.5rem;
+      right: -2.5rem;
       width: 32.1rem;
       height: 28.0rem;
       background-color: #F3D4E1;
       z-index: -1 !important;
+    }
+
+    &-abs2{
+      position: absolute;
+      right: 35rem;
+      bottom: -20rem;
+      z-index: -2;
+
+      &--img{
+        width: 100%;
+        height: 44.3rem;  
+        z-index: 10000;
+        object-fit: conver;
+        transform: rotate(60deg);
+      }
     }
 
     &-abs{
@@ -852,8 +923,7 @@ body {
       position: absolute;
       top: 0;
       right: -2.7rem;
-      z-index: 20;
-      z-index: 100 !important;
+      z-index: 10;
       position: relative;
       display: block;
 
@@ -880,6 +950,7 @@ body {
         border-radius: 16rem 16rem 0px 0px;
         border: 1rem solid #EAE4E4;
         z-index: 20 !important;
+        position: relative;
       }
     }
   }
@@ -896,7 +967,7 @@ body {
       width: 32.1rem;
       height: 28.0rem;
       position: absolute;
-      top: -5rem;
+      top: -3rem;
       right: 1rem;
       z-index: -1 !important;
     }
@@ -956,18 +1027,49 @@ body {
   float: right;
 }
 
+.extra-margin{
+  margin-top: 15.5rem;
+}
+
+
+.carte{
+  background: #DFD5D5;
+
+  &_header{
+
+    &-title{
+      font-family: "Libre Baskerville", sans-serif;
+      font-size: 3.6rem;
+      font-weight: 400;
+      line-height: 44.64px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: var(--color-primary);
+    }
+  }
+
+  &_image{
+
+    &-img{
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
 
 
 .section {
-  font-family: 'Montserrat', sans-serif;
-  padding: 10rem 22rem;
+  font-family: 'Open Sans', sans-serif;
+  padding: 7rem 22rem;
 
   @media only screen and (min-width: 2200px) {
-    padding: 10rem .5rem;
+    padding: 7rem .5rem;
   }
 
   @media only screen and (max-width: 1800px) {
-    padding: 10rem 22rem;
+    padding: 7rem 22rem;
   }
 
 
@@ -996,6 +1098,77 @@ body {
     padding: 5rem 0rem;
   }
 }
+
+
+/* Default styling for all items */
+.owl-carousel .owl-item {
+  position: relative;
+  transition: all 0.3s ease; /* Smooth transition */
+  opacity: 0.5; /* Slightly dim non-active items */
+}
+
+/* Remove blur and opacity for the active (center) item */
+.owl-carousel .owl-item.active {
+  filter: blur(0); /* No blur for the active item */
+  opacity: 1; /* Fully visible */
+  z-index: 2; /* Ensure it stays on top */
+}
+
+/* Apply partial blur to the next and previous items */
+.owl-carousel .owl-item:not(.active)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%; /* Start at the middle of the item */
+  width: 20%; /* Cover half of the item */
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Optional: Overlay for dim effect */
+  filter: blur(5px); /* Apply blur */
+  z-index: 1; /* Ensure it's above the item but below the active item */
+  pointer-events: none; /* Ensure it doesn't interfere with interaction */
+}
+
+.owl-carousel .owl-item:not(.active)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 20%; /* Start at the middle of the item */
+  width: 20%; /* Cover half of the item */
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Optional: Overlay for dim effect */
+  filter: blur(5px); /* Apply blur */
+  z-index: 1; /* Ensure it's above the item but below the active item */
+  pointer-events: none; /* Ensure it doesn't interfere with interaction */
+}
+
+
+.owl-carousel .owl-dots .owl-dot {
+  background: transparent; /* Transparent background */
+  border: .1rem solid var(--color-primary) !important; /* Border using your primary color variable */
+  border-radius: 50%; /* Make the dots circular */
+  width: 1.2rem; /* Adjust size as needed */
+  height: 1.2rem;
+  display: inline-block;
+  margin: .5rem; /* Space between dots */
+  transition: background 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+  position: absolute;
+  bottom: -4rem;
+  left: 45%;
+  right: 0;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+  background: var(--color-primary); /* Filled with primary color on active */
+  border-color: var(--color-primary); /* Border matches active background */
+}
+
+
+.owl-carousel .owl-dots .owl-dot:hover {
+  background: rgba(0, 0, 0, 0.1); /* Slight hover effect */
+  border-color: var(--color-primary);
+}
+
+
 
 
 // Imports
