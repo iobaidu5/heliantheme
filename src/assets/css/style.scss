@@ -108,11 +108,20 @@ body {
   z-index: 1000 !important;
   color: #000 !important;
   background-color: #fff !important;
+  border-radius: 0 !important;
+  width: 100%;
 }
 
 .navbar-active .Navbar_main {
-  // padding-top: 0 !important;
-  // padding-bottom: 0 !important;
+  border-radius: 0 !important;
+  width: 100%;
+  padding: 1rem 0 !important;
+  background-color: #E4E4E4CC !important;
+}
+
+.navbar-active .Navbar_main-bg {
+  border-radius: 0 !important;
+  padding: 1rem 4rem !important;
 }
 
 .navbar-active .Navbar_nav-link {
@@ -391,10 +400,6 @@ body {
   }
 }
 
-.navbar-active .Navbar_main{
-  background: #fff !important;
-}
-
 
 .Navbar {
   background: transparent;
@@ -410,6 +415,10 @@ body {
 
   &_main{
     padding: 0px 10rem !important;
+
+    @media only screen and (max-width: 1400px) {
+      padding: 0 4rem !important;
+    }
 
     &-bg{
       background: #E4E4E4CC;
@@ -445,7 +454,7 @@ body {
 
   &_toggler {
     //background-color: #fff !important;
-    color: var(--color-secondary) !important;
+    color: var(--color-primary) !important;
     font-family: 'Font Awesome\ 5 Free';
 
     &-icon {
@@ -503,8 +512,9 @@ body {
 
       &:hover {
         transition: .2s all ease-in-out;
-        color: var(--color-secondary) !important;
         text-decoration: none;
+        color: #69193B;
+        border-bottom: .2rem solid var(--color-primary);
         cursor: pointer;
       }
     }
@@ -556,6 +566,13 @@ body {
   }
 }
 
+.to-hide-1400{
+
+  @media only screen and (max-width: 1400px) {
+    display: none !important;
+  }
+}
+
 .slider {
   position: relative;
   z-index: 1;
@@ -595,8 +612,12 @@ body {
 
   &_content {
     position: relative;
-    padding: 40rem 14rem;
+    padding: 37rem 14rem;
     z-index: 100 !important;
+
+    @media only screen and (max-width: 1400px) {
+      padding: 27rem 7rem;
+    }
 
     @media only screen and (max-width: 990px) {
       width: 100%;
@@ -683,6 +704,23 @@ body {
     padding: 2.8rem;
     border-radius: 3rem;
     background-color: var(--color-primary);
+
+    @media only screen and (max-width: 1800px) {
+      height: 60rem;
+    }
+
+    @media only screen and (max-width: 1440px) {
+      height: 70rem;
+    }
+
+
+    @media only screen and (max-width: 1240px) {
+      height: 100%;
+    }
+
+    @media only screen and (max-width: 990px) {
+      margin: 1rem 0;
+    }
   }
 
   &_card2{
@@ -699,6 +737,10 @@ body {
       border-radius: 4rem;
       background-color: var(--color-primary);
       height: 100% !important;
+
+      @media only screen and (max-width: 990px) {
+        margin-top: 2rem;
+      }
 
     &-content{
 
@@ -861,6 +903,11 @@ body {
       object-fit: cover;
       z-index: 2;
       position: relative;
+
+      @media only screen and (max-width: 1400px) {
+        width: 100%;
+        height: auto;
+      }
     }
 
     &-primbg{
@@ -871,6 +918,10 @@ body {
       height: 39.2rem;
       background-color: var(--color-primary);
       z-index: 0;
+
+      @media only screen and (max-width: 990px) {
+        top: 3rem;
+      }
     }
 
     &-primbg2{
@@ -929,6 +980,10 @@ body {
       right: 15rem;
       bottom: 0;
 
+      @media only screen and (max-width: 990px) {
+        display: none;
+      }
+
       &--img{
         width: 100%;
         height: 34.8rem;  
@@ -964,6 +1019,11 @@ body {
       position: absolute;
       top: 4rem;
       left: -3rem;
+
+      @media only screen and (max-width: 990px) {
+       left: 0;
+      }
+
 
       &--img{
         width: 36.7rem;
@@ -1010,6 +1070,10 @@ body {
       right: -4rem;
       z-index: 20;
 
+      @media only screen and (max-width: 990px) {
+        right: 0;
+       }
+
       &--img{
         width: 21.0rem;
         max-width: 100%;
@@ -1028,6 +1092,10 @@ body {
       position: relative;
       display: block;
 
+      @media only screen and (max-width: 990px) {
+        right: 0;
+       }
+
       &--img{
         width: 42.1rem;
         max-width: 100%;
@@ -1042,6 +1110,10 @@ body {
       bottom: -50%;
       right: -17rem;
       z-index: 20 !important;
+
+      @media only screen and (max-width: 990px) {
+        right: 0;
+       }
 
       &--img{
         width: 25.1rem;
@@ -1061,6 +1133,10 @@ body {
       bottom: -65%;
       left: -10rem;
       z-index: 20 !important;
+
+      @media only screen and (max-width: 990px) {
+        left: 0;
+       }
 
       &--img{
         width: 40.6rem;
@@ -1094,6 +1170,10 @@ body {
       left: -10rem;
       z-index: 25 !important;
 
+      @media only screen and (max-width: 990px) {
+        left: 0;
+       }
+
       &--img{
         width: 40.6rem;
         max-width: 100%;
@@ -1110,6 +1190,10 @@ body {
       top: -70%;
       right: 7rem;
       z-index: 20 !important;
+
+      @media only screen and (max-width: 990px) {
+        right: 0;
+       }
 
       &--img{
         width: 22.6rem;
@@ -1130,6 +1214,10 @@ body {
       left: -5rem;
       z-index: 9;
       display: block;
+
+      @media only screen and (max-width: 990px) {
+        left: 0;
+       }
     }
 
     &-bg2{
@@ -1166,8 +1254,22 @@ body {
   &_faq{
     z-index: 100;
 
+
+    &-bars2{
+      z-index: 100 !important;
+
+      @media only screen and (max-width: 990px) {
+        margin-top: 20rem;
+      }
+    }
+
+
     &-bars{
       z-index: 100 !important;
+
+      @media only screen and (max-width: 990px) {
+        margin-top: 10rem;
+      }
     }
 
     &-bg{
@@ -1286,16 +1388,16 @@ body {
 
 
   @media only screen and (max-width: 1600px) {
-    padding: 7rem 17rem;
+    padding: 7rem 14rem;
   }
 
 
-  @media only screen and (max-width: 1200px) {
-    padding: 5rem 14rem;
+  @media only screen and (max-width: 1400px) {
+    padding: 5rem 10rem;
   }
 
   @media only screen and (max-width: 1100px) {
-    padding: 5rem 10rem;
+    padding: 5rem 7rem;
   }
 
   @media only screen and (max-width: 1000px) {
@@ -1320,21 +1422,21 @@ body {
   }
 
   @media only screen and (max-width: 1800px) {
-    padding: 7rem 17rem;
-  }
-
-
-  @media only screen and (max-width: 1600px) {
     padding: 7rem 14rem;
   }
 
 
+  @media only screen and (max-width: 1600px) {
+    padding: 7rem 10rem;
+  }
+
+
   @media only screen and (max-width: 1200px) {
-    padding: 5rem 14rem;
+    padding: 5rem 10rem;
   }
 
   @media only screen and (max-width: 1100px) {
-    padding: 5rem 10rem;
+    padding: 5rem 7rem;
   }
 
   @media only screen and (max-width: 1000px) {
@@ -1642,6 +1744,11 @@ body {
   color: #fff;
   font-size: 1.6rem;
   margin: .7rem 0;
+
+  @media only screen and (max-width: 990px) {
+    padding-left: 2rem !important;
+    list-style: inside;
+  }
 }
 
 .single-footer-widget .footer-quick-links li a {

@@ -12,7 +12,7 @@
 
     &.active {
       a {
-        color: var(--color-secondary) !important;
+        border-bottom: .2rem solid var(--color-primary);
       }
     }
     .btn {
